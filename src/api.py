@@ -2,9 +2,11 @@ import requests
 import dateutil.parser
 import enum
 import re
+import os
+from ast import literal_eval
 
 # FIGURE OUT THE AUTHENTICATION CREDENTIALS FROM THE API DOCUMENTATION REPOSITORY YOURSELF
-auth_code = None # HAVE TO FILL THIS BEFORE USAGE
+auth_code = literal_eval(os.environ.get('NEXTBUS_AUTH', 'None'))
 baseurl = 'https://nnextbus.nus.edu.sg'
 
 class publicity_banner_type(enum.Enum):
