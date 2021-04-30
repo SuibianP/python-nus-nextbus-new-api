@@ -7,7 +7,10 @@ build-backend = "setuptools.build_meta"
 
 [tool.pytest.ini_options]
 minversion = "6.0"
-required_plugins = pytest-env
-; might add credentials here so as not to type every time
-env =
-    D:NEXTBUS_AUTH = None
+required_plugins = [
+	"pytest-env"
+]
+# might add credentials here so as not to type every time
+env = [
+	'D:NEXTBUS_AUTH=None'
+]
